@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+
+    function Human (name,age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    var  justin = new Human ('Justin', 32);
+    var  mary = new Human ('Mary', 28);
+    var  matt = new Human ('Matt', 44);
+
+    var arr = [justin, mary, matt];
+
+    function sortByAge(arr) {
+        arr.sort((a, b) => a.age > b.age ? 1 : -1);
+    }
+    sortByAge (arr);
+
+    for (var i = 0; i < arr.length; i++) {
+        document.write(`Имя: ${arr[i].name}<br>Возраст: ${arr[i].age}<hr><br>`)
+    }
+
+
+
+
+
+</script>
+</body>
