@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+
+    function Human (name, work, phone) {
+        this.name = name;
+        this.work = work;
+        this.phone = phone;
+        this.say = function () {
+            document.write('Hello! My name is ' + this.name + '. '+ 'Im a(an) '+ this.work + '. ' + 'My telephone number is ' + this.phone + '. ' +'Nice to meet you!');
+
+        }
+    }
+    var a = new Human ('Loren', 'teacher', '3802435742');
+    var b = new Human ('Jozeph', 'teacher', '3802435742');
+    a.say ();
+    b.say ();
+
+
+
+
+
+
+</script>
+</body>
+</html>
