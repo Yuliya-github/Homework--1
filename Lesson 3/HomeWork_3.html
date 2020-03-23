@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+    var Array = ['Jazz', 'Bluz'];
+    document.write('<p> Исходный список музыки:' + Array.join(' '));
+    document.write('<hr/>');
+
+    var add = Array.push('Rock-n-roll');
+    document.write('<p> После добавления:' + Array.join(' '));
+    document.write('<hr/>');
+
+    var change = Array.splice(1,1);
+    var changed = Array.splice(1,0, 'Classic');
+    document.write('<p> После замены:' + Array.join(' '));
+    document.write('<hr/>');
+
+    var del = Array.shift();
+    document.write('<p> Удаленное значение:' + del);
+    document.write('<hr/>');
+
+    var adding = Array.unshift('Rap', 'Reggae');
+    document.write('<p> После добавления:' + Array.join(' '));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
