@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+    var cryptowallet = {
+        Bitcoin: {
+            name:' Bitcoin',
+            logo: '<img src="https://investory.news/wp-content/uploads/2019/11/Bitcoin.jpg">',
+            coins: 35,
+            course: 8000,
+            courseHRN: 3
+        },
+        Ethereum: {
+
+            name: 'Ethereum',
+            logo: '<img src=""https://investory.news/wp-content/uploads/2019/11/Bitcoin.jpg"">',
+            coins: 51,
+            course: 7200,
+            courseHRN: 5
+        },
+        Stellar: {
+
+            name: 'Stellar',
+            logo: '<img src=""https://investory.news/wp-content/uploads/2019/11/Bitcoin.jpg"">',
+            coins: 20,
+            course: 320,
+            courseHRN: 2
+        },
+        func: function () {
+            var crypto = prompt("Введдите название валюты");
+            document.write('<p/> Здравствуйте! На вашем балансе ' + cryptowallet[crypto].logo + "осталось " + cryptowallet[crypto].coins + 'если вы сегодня продадите их то, получите' + (cryptowallet[crypto].coins) * cryptowallet[crypto].courseHRN  );
+        }
+    }
+    cryptowallet.func();
+
+
+</script>
+</body>
+</html>
