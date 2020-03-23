@@ -8,21 +8,18 @@
 <body>
 
 <script>
-    var funct = function () {
-        var a = prompt("name");
-        return a
-    };
-
-    array = [1, 2, 3, 4];
-
-
-    function map (fn, arr) {
-
-       fn(arr)
+    function map(fn, array) {
+        var Array = [];
+        for (var i = 0; i < array.length; i++)
+            Array[i] = fn(array[i]);
+        return Array;
     }
-
-    map(funct, array)
-
+    var fn = function(a) {
+        return a+100;
+    }
+    var array3 = [1, 2, 3, 4, 5];
+    var result = map(fn, array3);
+    document.write(result);
 
 
 
