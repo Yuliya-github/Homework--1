@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+   <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+   var Document = {
+       header: "This is header",
+       body: 'This is body',
+       footer: 'This is footer',
+       data: 'This is data',
+
+       application: {
+           header: {},
+           body: {},
+           footer: {},
+           data: {}
+       },
+       show:function() {
+       document.write('<p> Header is: ' + this.header);
+       document.write('<p> Body is: ' + this.body);
+       document.write('<p> Footer is: ' + this.footer);
+       document.write('<p> Data is: ' + this.data + '<hr>');
+       },
+       changeHeader: function (header) {
+           this.header = header;
+       }
+   }
+   Document.show();
+   Document.changeHeader ('HEADER');
+   Document.show();
+
+
+</script>
+</body>
+</html>
+
+
+var arr = [justin, mary, matt];
+
+var  justin = {name: 'Justin', age: 32};
+var  mary = {name: 'Mary', age: 28};
+var  matt = {name: 'Matt', age: 44};
+
+function sortByAge(arr) {
+arr.sort((a, b) => a.age > b.age ? 1 : -1);
+}
+sortByAge (arr);
+
+alert(arr[0].name);
+alert(arr[1].name);
+alert(arr[2].name);
