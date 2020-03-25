@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+
+    function Human (name) {
+        this.name = name;
+        this.say = function () {
+            document.write('Hello! My name is ' + this.name  + '<br/>');
+        }
+    }
+        function Group1 (name) {
+            this.name = name;
+            this.type = 'yoga';
+            this.place = 'studio';
+            this.trainer = 'Jessica';
+        }
+        function Group2 (name)  {
+            this.name = name;
+            this.type = 'swimming';
+            this.place = 'pull';
+            this.trainer = 'Peter';
+        }
+
+
+        var human = new Human ('name');
+
+        Group1.prototype = human;
+        Group2.prototype = human;
+
+        var Loren = new Group1('Loren');
+        var Jozeph = new Group2('Jozeph');
+        var  Mary = new Group1('Mary');
+
+
+    document.write('Group 1' + '<br/>');
+    Loren.say();
+    document.write('My trainer is ' + Loren.trainer + '. I visit '+ Loren.type + ' at the ' + Loren.place + '. Nice to meet you!' + '<br/>'+'<br/>'+ '<br/>');
+    Mary.say();
+    document.write('My trainer is ' + Mary.trainer + '. I visit '+ Mary.type + ' at the ' + Mary.place + '. Nice to meet you!' + '<br/>'+'<br/>'+ '<br/>');
+    document.write('Group 2' + '<br/>');
+    Jozeph.say();
+    document.write('My trainer is ' + Jozeph.trainer + '. I visit '+ Jozeph.type + ' at the ' + Jozeph.place + '. Nice to meet you!');
+
+
+
+</script>
+</body>
+</html>
