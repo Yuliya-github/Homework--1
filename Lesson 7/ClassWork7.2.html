@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    function createNewUser() {
+        let newUser = {
+            firstName : prompt('Enter name',''),
+            lastName : prompt('Enter surname','')
+        }
+        function getLogin() {
+            let login = newUser.firstName.substr(0, 1).toLowerCase() + newUser.lastName.toLowerCase()
+            console.log(newUser.firstName + ' ' + newUser.lastName +' ' + login)
+        }
+        getLogin()
+
+    }
+    createNewUser()
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    function createNewUser() {
+        let newUser = {
+            firstName : prompt('Enter name',''),
+            lastName : prompt('Enter surname',''),
+            birthDay : prompt('Enter birthday', "dd.mm.yyyy")
+        }
+        function getLogin() {
+            let login = newUser.firstName.substr(0, 1).toLowerCase() + newUser.lastName.toLowerCase() //выделяем первую букву имени,  и переводим в нижний регистр
+            console.log('Name and lastname: ' + newUser.firstName + ' ' + newUser.lastName  + ' Login: ' + login)
+        }
+        getLogin()
+        function getAge() {
+            let now = new Date(); // Текущая дата
+            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // Текущая дата без времени
+            let d = newUser.birthDay.split('.'); // Убераем точки из введенной даты рождения
+            let birth = new Date(d[2]+','+d[1]+','+d[0]); // Сводим введенную дату рождения к формату гггг/мм/дд
+            let dobnow = new Date(today.getFullYear(), d[1], d[0]); // Определяем др в текущем году
+            let age;
+            age = today.getFullYear() - d[2]; // Разница между текущим годом и годом рождения
+ 
+            if (today < dobnow) { // если ДР в этом году еще не наступил, отнимаем 1 год
+              age = age-1;
+             }
+
+            
+
+          
+            console.log('age: ' + age)
+        }
+        getAge()
+    }
+    createNewUser()
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>

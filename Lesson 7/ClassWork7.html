@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<script>
+
+    let words = [ "программа",    "макака",    "прекрасный",    "оладушек"  ];
+    let word = words[Math.floor(Math.random() * words.length)];
+    let answerArray = [];
+    for (let i in word) {
+        answerArray[i] ="_";
+    }
+    let remainingLetters = word.length;
+    while (remainingLetters > 0) {
+        // Показываемсостояниеигры
+         alert(answerArray.join(" "));
+        // Запрашиваемвариантответа
+         let guess =prompt("Угадайтебукву, илинажмитеОтменадлявыходаизигры.");
+         if (guess ===null) {
+        // Выходимизигровогоцикла
+             break;
+         } else if (guess.length!== 1) {
+             alert("Пожалуйста, введитеодиночнуюбукву.");
+         } else {
+             // Обновляемсостояниеигры
+             for (let j in word) {
+                 if (word[j] === guess) {
+                     answerArray[j] = guess;
+                     remainingLetters--;
+                 }
+             }
+         }
+
+// Конецигровогоцикла
+ }
+    // Отображаемответипоздравляемигрока
+    alert(answerArray.join(" "));
+    alert("Отлично! Былозагаданослово "+ word);
+
+</script>
+</body>
+</html>
