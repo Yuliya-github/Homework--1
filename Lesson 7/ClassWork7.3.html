@@ -20,7 +20,7 @@
         function getAge() {
             let now = new Date(); // Текущая дата
             let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // Текущая дата без времени
-            let d = newUser.birthDay.split('.'); // Убераем точки из введенной даты рождения
+            let d = newUser.birthDay.split('.'); // Разбиваем строку на массив по заданному разделителю "."
             let birth = new Date(d[2]+','+d[1]+','+d[0]); // Сводим введенную дату рождения к формату гггг/мм/дд
             let dobnow = new Date(today.getFullYear(), d[1], d[0]); // Определяем др в текущем году
             let age;
