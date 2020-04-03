@@ -9,13 +9,13 @@
 
 <script>
 
-    let words = [ "программа",    "макака",    "прекрасный",    "оладушек"  ];
-    let word = words[Math.floor(Math.random() * words.length)];
-    let answerArray = [];
+    const words = [ "программа",    "макака",    "прекрасный",    "оладушек"  ];
+    const word = words[Math.floor(Math.random() * words.length)];
+    const answerArray = [];
     for (let i in word) {
         answerArray[i] ="_";
     }
-    let remainingLetters = word.length;
+   const remainingLetters = word.length;
     while (remainingLetters > 0) {
         // Показываемсостояниеигры
          alert(answerArray.join(" "));
